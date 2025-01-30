@@ -1,0 +1,9 @@
+project_name: ngiflib
+static_lib_name: libngiflib.a
+dyn_lib_name: libngiflib.so
+ban:
+  ~
+extra_c_flags: 
+  - -lSDL
+  - -I/usr/include/SDL
+asan_option: allocator_may_return_null=1

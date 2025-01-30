@@ -118,7 +118,7 @@ impl Executor {
         let success = output.status.success();
         if !success {
             eyre::bail!(
-                "fail to compile {programs:?}\n, {}",
+                "fail to compile {programs:?}\n, {cmd:?}, {}",
                 String::from_utf8_lossy(&output.stderr)
             );
         }
