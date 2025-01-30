@@ -24,9 +24,9 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --de
 
 
 RUN mkdir -p /prompt_fuzz
-ADD ./data/ /prompt_fuzz/data
-ADD ./src/ /prompt_fuzz/src
-ADD ./testsuites /prompt_fuzz/testsuites
-ADD Cargo.lock Cargo.toml /prompt_fuzz/
-ADD ban_all.txt /prompt_fuzz/ban_all.txt
+# ADD ./data/ /prompt_fuzz/data
+# ADD ./src/ /prompt_fuzz/src
+# ADD ./testsuites /prompt_fuzz/testsuites
+# ADD Cargo.lock Cargo.toml /prompt_fuzz/
+# ADD ban_all.txt /prompt_fuzz/ban_all.txt
 WORKDIR /prompt_fuzz

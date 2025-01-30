@@ -1,3 +1,30 @@
+# How to Run the Experiment
+## Setup docker
+```bash
+$ docker build -t promptfuzz .
+$ docker run -it -v $(pwd):/prompt_fuzz promptfuzz bash
+```
+
+## Build target library
+```bash
+$ cd data/libtiff
+$ ./build.sh
+```
+
+## Run PromptFuzz
+Default is `gpt-4o-mini-2024-07-18`
+```bash
+$ export OPENAI_API_KEY=$(your_key)
+$ export OPENAI_PROXY_BASE=$(gpt_base_url)
+$ cargo run --bin fuzzer -- libtiff
+```
+
+For deepseek:
+```bash
+$ cargo run --bin fuzzer -- libtiff -g chat-gpt -i chat-gpt
+```
+
+---
 # Prompt Fuzzing for Fuzz Driver Generation
 PromptFuzz is an automated tool that generates high-quality fuzz drivers for libraries via a fuzz loop constructed on mutating LLMs' prompts. The fuzz loop of PromptFuzz aims to guide the mutation of LLMs' prompts to generate programs that cover more reachable code and explore complex API interrelationships, which are effective for fuzzing.
 
