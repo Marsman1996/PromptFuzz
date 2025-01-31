@@ -1,0 +1,8 @@
+project_name: liblouis
+static_lib_name: liblouis.a
+dyn_lib_name: liblouis.so
+ban:
+  ~
+extra_c_flags: 
+  - -lyaml
+asan_option: allocator_may_return_null=1
