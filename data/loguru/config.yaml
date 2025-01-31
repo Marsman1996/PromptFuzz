@@ -1,0 +1,6 @@
+project_name: loguru
+static_lib_name: libloguru.a
+dyn_lib_name: libloguru.so
+ban:
+  ~
+asan_option: allocator_may_return_null=1
