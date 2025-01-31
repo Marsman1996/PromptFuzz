@@ -1,0 +1,11 @@
+project_name: exiv2
+static_lib_name: libexiv2.a
+dyn_lib_name: libexiv2.so
+ban:
+  ~
+extra_c_flags: 
+  - -lfmt 
+  - -lexpat 
+  - -lz 
+  - -lINIReader
+asan_option: allocator_may_return_null=1
