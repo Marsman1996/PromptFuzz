@@ -1,0 +1,9 @@
+project_name: libming
+static_lib_name: libming.a
+dyn_lib_name: libming.so
+ban:
+  ~
+extra_c_flags: 
+  - -lz 
+  - -fcommon
+asan_option: allocator_may_return_null=1
