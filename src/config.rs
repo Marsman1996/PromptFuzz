@@ -15,7 +15,7 @@ pub const CONNECT_TIMEOUT: u64 = 1;
 // OpenAI codex configure options
 pub const CODEX_MODEL: &str = "code-davinci-002";
 
-pub const DEEPSEEK_MODEL: &str = "deepseek-chat";
+pub const DEEPSEEK_MODEL: &str = "deepseek-v3";
 pub const CHATGPT_INPUTR_PRICE: f32 = 0.03_f32;
 pub const CHATGPT_OUTPUT_PRICE: f32 = 0.06_f32;
 pub const CHATGPT_CONTEXT_LIMIT: usize = 40970;
